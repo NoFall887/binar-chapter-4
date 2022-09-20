@@ -1,0 +1,226 @@
+/* GLOBAL CONFIGURATION */
+html {
+  scroll-behavior: smooth;
+}
+* {
+  box-sizing: border-box;
+  font-style: helvetica, arial;
+  font-size: 14px;
+  color: black;
+  margin: 0;
+}
+
+:root {
+  --lime-green-04: #5CB85F;
+  --hero-navbar-background: #F1F3FF;
+  --dark-blue-04: #0D28A6;
+}
+
+/* SELF DEFINED STYLING */
+.__main-btn {
+  background-color: var(--lime-green-04);
+  font-weight: 700;
+  color: white !important;
+  border-color: var(--lime-green-04);
+  padding: 8px 12px;
+  border-radius: 2px;
+}
+h2 {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+/* hero section styling */
+.hero {
+  background-color: var(--hero-navbar-background);
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 54px;
+}
+
+.hero__text {
+  max-width: 568px;
+}
+
+.hero__car-img {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+/*    blue box behind the car img */
+.hero__car-img-container::before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 60px 0 0 ;
+  bottom: 0;
+  background: var(--dark-blue-04);
+  width: 100%;
+  height: 60%;
+
+}
+/* our services styling */
+#our-services {
+  max-width: 1200px;
+}
+.our-service__ul {
+  list-style-type: none;
+}
+
+.our-service__img {
+  width: 100%;
+}
+
+/* why us styling */
+.why-us__p--bold {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.why-us__icon {
+  width: 32px;
+}
+
+.why-us__content-container {
+  gap: 32px;
+}
+
+#why-us {
+  max-width: 1200px;
+}
+
+@media only screen and (max-width: 992px) {
+  .why-us__content-container {
+    gap: 16px;
+  }
+  .why-us__content-container div {
+    width: 48%;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .why-us__content-container {
+    gap: 16px;
+  }
+  .why-us__content-container div {
+    width: 100%;
+  }
+}
+
+/* carousel styling */
+.carousel__star {
+  width: 16px;
+}
+
+.carousel__user-name {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.carousel__img {
+  width: 80px !important;
+}
+
+.carousel__content-container {
+  background-color: var(--hero-navbar-background);
+  padding: 69px 46px;
+}
+
+@media only screen and (max-width:576px){
+  .carousel__content-container {
+    padding: 40px 32px;
+  }
+}
+
+/* sewa sekarang */
+.sewa-sekarang__container {
+  background-color: var(--dark-blue-04);
+  max-width: 1136px;
+  padding: 64px;
+  
+}
+
+.sewa-sekarang__container * {
+  color: white;
+  margin: auto;
+}
+
+.sewa-sekarang__container h2 {
+  font-size: 36px;
+}
+
+.sewa-sekarang__text {
+  max-width: 468px;
+}
+
+/* faq */
+#faq {
+  max-width: 1200px;
+}
+
+/* footer */
+.footer__link {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+footer {
+  max-width: 1141px;
+}
+/* GLIDE OVERRIDE */
+.glide__arrows {
+  gap: 16px;
+}
+
+.glide__arrow {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+@media only screen and (max-width: 932px) {
+  .glide__track {
+    margin: 0 16px;
+    border-radius: 8px;
+  }
+}
+
+.navbar .container-fluid {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* BOOTSTRAP OVERRIDE */
+.navbar {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  background-color: var(--hero-navbar-background);
+}
+
+.navbar-nav{
+  gap: 16px;
+}
+
+.bi-check-lg::before {
+  color: var(--dark-blue-04);
+}
+ 
+.accordion-item {
+  margin-bottom: 16px;
+  border-radius: 4px;
+  border-top: 1px solid #D4D4D4 !important;
+}
+
+.accordion-button {
+  
+  border-radius: 4px;
+  
+}
+
+.offcanvas-header {
+  padding: 38px 16px 0 16px;
+}
