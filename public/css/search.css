@@ -1,0 +1,44 @@
+.filter__container {
+  position: relative;
+}
+.hero {
+  position: relative;
+  
+}
+#filter-body .hero {
+  margin-bottom: 84px;
+}
+#filter {
+  max-width: 1047px;
+  width: 100%;
+  margin: auto;
+  position: absolute;
+  bottom: -15%;
+  translate: -50%;
+  left: 50%;
+  background-color: white;
+  z-index: 1;
+}
+
+#filter .col {
+  margin-top: 0;
+}
+
+#filter .input-group .form-control {
+  border-right: none;
+}
+
+#filter .btn-success {
+  padding: 5px 12px;
+}
+
+.input-group-text {
+  background-color: white;
+  border-left: none;
+}
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
