@@ -85,7 +85,7 @@
       <div class="col">
         <label for="penjem" class="form-label">Waktu Jemput/Ambil</label>
         <div class="input-group">
-          <input type="number" class="form-control" id="waktu-jemput">
+          <input type="number" class="form-control" id="time">
           <span class="input-group-text">
             <img src="./images/fi_clock.svg">
           </span>
@@ -94,7 +94,7 @@
       <div class="col">
         <label for="jumlah-penumpang" class="form-label">Jumlah Penumpang (optional)</label>
         <div class="input-group"> 
-          <input type="number" class="form-control" id="jumlah-penumpang">
+          <input type="number" class="form-control" id="passenger">
           <span class="input-group-text">
             <img src="./images/fi_users.svg">
           </span>
@@ -102,13 +102,14 @@
         
       </div>
       <div class="col flex-grow-0">
-        <button type="submit" class="btn btn-success __main-btn text-nowrap">
+        <button type="submit" id="search-btn" class="btn btn-success __main-btn text-nowrap">
           Cari Mobil
         </button>
       </div>
       
     </form>
   </section>
+  <section id="cars-container"></section>
   <footer class="py-4 mb-5 container-fluid px-3 px-md-4">
     <div class="row flex-column flex-sm-row">
       <div class="col pb-3 pb-sm-0">
@@ -141,5 +142,9 @@
       </div>
     </div>
   </footer>
+  <script type="text/javascript" src="./scripts/binar.js"></script>
+    <script type="text/javascript" src="./scripts/app.example.js"></script>
+    <script type="text/javascript" src="./scripts/car.example.js"></script>
+    <script type="text/javascript" src="./scripts/main.example.js"></script>
 </body>
 </html>

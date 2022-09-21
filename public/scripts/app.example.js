@@ -1,19 +1,21 @@
 class App {
   constructor() {
-    this.clearButton = document.getElementById("clear-btn");
-    this.loadButton = document.getElementById("load-btn");
+    this.searchButton = document.getElementById("search-btn");
     this.carContainerElement = document.getElementById("cars-container");
   }
 
-  async init() {
-    await this.load();
-
-    // Register click listener
-    this.clearButton.onclick = this.clear;
-    this.loadButton.onclick = this.run;
+  init() {
+    // Register click lister
+    this.searchButton.onclick = this.run;
   }
 
-  run = () => {
+  run = async (e) => {
+    e.preventDefault();
+    const dateValue = document.getElementById("date").value;
+    const timeValue = document.getElementById("time").value;
+    const passengerValue = document.getElementById("passenger").value;
+
+    await this.load();
     Car.list.forEach((car) => {
       const node = document.createElement("div");
       node.innerHTML = car.render();
