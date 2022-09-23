@@ -26,7 +26,7 @@ function onRequest(req, res) {
         if (err) {
           console.log(err);
           res.writeHead(404);
-          res.end(JSON.stringify(err));
+          res.end("404 NOT FOUND");
           return;
         }
         if (path.extname(file) === ".svg") {

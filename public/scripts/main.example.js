@@ -15,3 +15,4 @@ console.log(params);
 const app = new App();
 
 app.init();
+app.run();

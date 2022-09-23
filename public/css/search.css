@@ -5,9 +5,15 @@
   position: relative;
   
 }
-#filter-body .hero {
+
+.hero {
   margin-bottom: 84px;
 }
+
+#search-btn {
+  width: 100%;
+}
+
 #filter {
   max-width: 1047px;
   width: 100%;
@@ -18,6 +24,7 @@
   left: 50%;
   background-color: white;
   z-index: 1;
+  justify-content: center;
 }
 
 #filter .col {
@@ -36,9 +43,99 @@
   background-color: white;
   border-left: none;
 }
+.result__car-img {
+  width: 100%;
+  margin-bottom: 3rem;
+  object-fit: contain;
+  aspect-ratio: 16/9;
+}
+.result__car-card {
+  width: 31%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.price {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.car-name {
+  font-weight: 500;
+  margin-bottom: 0;
+}
+.search-result-btn {
+  display: block;
+  width: 100%;
+}
+#search-result {
+  gap: 1.5rem;
+  max-width: 1047px;
+  margin: auto;
+  flex-wrap: wrap;
+  margin-bottom: 6rem;
+  justify-content: center;
+}
 
 input[type="date"]::-webkit-inner-spin-button,
 input[type="date"]::-webkit-calendar-picker-indicator {
-    display: none;
+    opacity: 0;
     -webkit-appearance: none;
+}
+input[type="time"]::-webkit-inner-spin-button,
+input[type="time"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    -webkit-appearance: none;
+}
+
+@media only screen and (max-width: 1040px) {
+  #filter {
+    width: 98%;
+    bottom: -25%;
+  }
+  .hero {
+    margin-bottom: 112px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  #filter {  
+    bottom: -50%;
+  }
+  .hero {
+    margin-bottom: 174px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .result__car-card {
+    width: 48%;
+  }
+  #filter {  
+    bottom: -70%;
+  }
+  .hero {
+    margin-bottom: 244px;
+  }
+}
+
+@media only screen and (max-width: 726px) {
+  #filter {
+    bottom: -60%;
+  }
+}
+@media only screen and (max-width: 630px) {
+  #filter {
+    bottom: -55%;
+  }
+}
+@media only screen and (max-width: 576px) {
+  #filter {
+    bottom: -38%;
+  }
+  #search-result {
+    width: 95%;
+  }
+  .result__car-card {
+    width: 100%;
+  }
 }
