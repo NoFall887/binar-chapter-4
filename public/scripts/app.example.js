@@ -12,7 +12,8 @@ class App {
     this.searchButton.onclick = this.run;
     // set default value
     this.date.value = new Date().toLocaleDateString("en-CA");
-    this.time.value = "00:00:00";
+    const tempDate = new Date();
+    this.time.value = `${tempDate.getHours()}:${tempDate.getMinutes()}`;
     this.passenger.value = 1;
   }
 
@@ -25,11 +26,13 @@ class App {
     const dateTimeValue = new Date(`${dateValue} ${timeValue}`);
 
     await this.load(dateTimeValue, passengerValue);
+
+    if (Car.list.length === 0) {
+      this.carContainerElement.innerHTML +=
+        '<p class="d-flex justify-content-center">No cars available</p>';
+    }
     Car.list.forEach((car) => {
-      // const node = document.createElement("div");
-      // node.innerHTML = car.render();
       this.carContainerElement.innerHTML += car.render();
-      // this.carContainerElement.appendChild(node);
     });
   };
 

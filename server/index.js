@@ -29,9 +29,27 @@ function onRequest(req, res) {
           res.end("404 NOT FOUND");
           return;
         }
-        if (path.extname(file) === ".svg") {
-          res.setHeader("content-type", "image/svg+xml");
+        const extname = path.extname(file);
+        let contentType = "text/html";
+        switch (extname) {
+          case ".js":
+            contentType = "text/javascript";
+            break;
+          case ".css":
+            contentType = "text/css";
+            break;
+          case ".png":
+            contentType = "image/png";
+            break;
+          case ".jpg":
+            contentType = "image/jpg";
+            break;
+          case ".svg":
+            contentType = "image/svg+xml";
+            break;
         }
+        res.setHeader("content-type", contentType);
+
         res.writeHead(200);
         res.end(data);
       });
